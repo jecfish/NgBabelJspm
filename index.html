@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Babel Jspm</title>
+	<script src="jspm_packages/system.js"></script>
+  <script src="config.js"></script>
+  <script>
+    System.import('./app/app');
+  </script>
+</head>
+<body ng-app="myApp">
+	<h1>AngularJs + Babel + JSPM + GULP</h1>
+	<div ng-controller="userCtrl as u">
+		<h2>List of Github users</h2>
+		<ul ng-repeat="usr in u.users">
+			<li>{{usr.id}}. {{usr.login}} <img src="{{usr.avatar_url}}" height="50px" alt=""></li>
+		</ul>
+	</div>
+</body>
+</html>
