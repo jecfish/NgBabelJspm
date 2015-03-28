@@ -22,7 +22,6 @@ gulp.task('watch', function(){
 
 gulp.task('connect', function() {
   connect.server({
-    root: '.',
     livereload: true
   });
 });
