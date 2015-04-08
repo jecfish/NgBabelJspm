@@ -9,7 +9,7 @@ gulp.task('html', function() {
 
 //Js task
 gulp.task('js', function() {
-  gulp.src('./app/*/**.js')
+  gulp.src('./app/**/*.js')
   .pipe(connect.reload());
 });
 
@@ -17,7 +17,7 @@ gulp.task('js', function() {
 gulp.task('watch', function(){
   //html
   gulp.watch(['*.html'], ['html']);
-  gulp.watch(['./app/*/**.js'], ['js']);
+  gulp.watch(['./app/**/*.js'], ['js']);
 });
 
 gulp.task('connect', function() {
